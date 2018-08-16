@@ -62,6 +62,11 @@ EOF
 			$article->setPublishedAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
 		}
 
+		$article->setAuthor('Sondjoe')
+            ->setHeartCount(rand(0, 100))
+            ->setImageFilename('asteriod.jpeg')
+        ;
+
 		$em->persist($article);
 		$em->flush();
 
